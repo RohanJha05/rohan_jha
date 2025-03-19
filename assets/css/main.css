@@ -195,7 +195,7 @@ h6 {
 .menu-active {
   align-items: center;
   justify-content: center;
-  position: relative;
+  /* position: relative; */
 }
 
 .menu-active .line1 {
