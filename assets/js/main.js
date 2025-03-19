@@ -8,8 +8,9 @@
 
   function headerToggle() {
     document.querySelector("#header").classList.toggle("header-show");
-    headerToggleBtn.classList.toggle("bi-list");
-    headerToggleBtn.classList.toggle("bi-x");
+    document.querySelector(".header-toggle").classList.toggle("menu-active");
+    // headerToggleBtn.classList.toggle("bi-list");
+    // headerToggleBtn.classList.toggle("bi-x");
   }
   headerToggleBtn.addEventListener("click", headerToggle);
 

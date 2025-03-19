@@ -163,11 +163,12 @@ h6 {
 
 .header-toggle {
   color: var(--contrast-color);
-  background-color: var(--accent-color);
+  /* background-color: var(--accent-color); */
   font-size: 22px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 40px;
   height: 40px;
   border-radius: 10%;
@@ -177,8 +178,39 @@ h6 {
   /* left: 0px; */
   margin-left: auto;
   margin-right: 15px;
+
   z-index: 99999;
   transition: background-color 0.3s;
+
+  border: 2px solid #149ddd90;
+}
+
+.line {
+  height: 3px;
+  width: 70%;
+  background-color: #149ddd90;
+  transition: 0.3s all linear;
+}
+
+.menu-active {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.menu-active .line1 {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.menu-active .line2 {
+  opacity: 0;
+  background-color: transparent;
+}
+
+.menu-active .line3 {
+  transform: rotate(-45deg);
+  position: absolute;
 }
 
 .header .header-toggle:hover {
@@ -781,6 +813,10 @@ section,
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
+}
+
+.contact-section-cta-text h4 {
+  text-align-last: center;
 }
 
 @media (max-width: 575px) {
